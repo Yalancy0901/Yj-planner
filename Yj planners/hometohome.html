@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ticket booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    .myLink {display: none}
+    .flight-booking-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flight-booking-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="date"],
+.form-row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-row input[type="submit"] {
+    background-color: rgb(225, 181, 100);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-row input[type="submit"]:hover {
+    background-color: rgb(225, 181, 100);
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+  </head>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>JY Holidays</b></a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <img class="w3-image" src= "https://mediaindia.eu/wp-content/uploads/2017/09/India_tourism.jpg" alt="London" width="1500" height="700">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Flight</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');"><i class="fa fa-bed w3-margin-right"></i>Hotel</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');"><i class="fa fa-car w3-margin-right"></i>Rental</button>
+    </div>
+
+    <!-- Tabs -->
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Travel the world with us</h3>
+      <div class="center-wrapper">
+        <div class="flight-booking-container">
+            <h1></h1>
+    <div class="flight-booking-container">
+        <form action="landing.html" method="post" class="flight-booking-form">
+            <div class="form-row">
+                <label for="departure">Departure Airport:</label>
+                <input type="text" id="destination" name="destination" list="destinations" required>
+                <datalist id="destinations">
+                    
+                    <option value="Banglore"></option>
+                    <option value="Chennai"></option>
+                    <option value="Delhi"></option>
+                    <option value="Kolkata"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Punjab"></option>
+                    
+                </datalist>
+            </div>
+
+            <div class="form-row">
+                <label for="destination">Destination Airport:</label>
+                <input type="text" id="destination" name="destination" list="destinations" required>
+                <datalist id="destinations">
+                    
+                    <option value="Banglore"></option>
+                    <option value="Chennai"></option>
+                    <option value="Delhi"></option>
+                    <option value="Kolkata"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Punjab"></option>
+                    
+                </datalist>
+            </div>
+
+            <div class="form-row">
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            </div>
+
+            <div class="form-row">
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date">
+            </div>
+
+            <div class="form-row">
+                <label for="passengers">Passengers:</label>
+                <select id="passengers" name="passengers" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-row">
+              
+                <input type="submit" value="Search Flights">
+            
+                
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+</div>
+
+    <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Find the best hotels</h3>
+      <p>Book a hotel with us and get the best fares and promotions.</p>
+      <p>We know hotels - we know comfort.</p>
+      <p><a href="restaurants.html">
+        <button class="w3-button w3-dark-grey">Search Hotels</button>
+      </a></p>
+    </div>
+
+    <div id="Car" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Best car rental in the world!</h3>
+      <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
+      <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+      <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
+    </div>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;">
+
+  <!-- Good offers -->
+  <div class="w3-container w3-margin-top">
+    <h3>Good Offers Right Now</h3>
+    <h6>Up to <strong>50%</strong> discount.</h6>
+  </div>
+  <div class="w3-row-padding w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="kolkata.jpg" alt="Cinque Terre" style="width:100%">
+        <span class="w3-display-bottomleft w3-padding">Kolkata</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="goa.jpg" alt="New York" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Goa</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="mumbai.jpg" alt="San Francisco" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Mumbai</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="shimla.jpg" alt="Pisa" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Shimla</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="tn.jpg" alt="Paris" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Chennai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Nature -->
+  <div class="w3-container">
+    <h3>Explore Nature</h3>
+    <p>Travel with us and see nature at its finest.</p>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE4ENtG-Ui5PnQ0pPiwxcNddoBNuPVTiaRlg&usqp=CAU" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Shimla</h3>
+        <p class="w3-opacity">Roundtrip from Rs.5300</p>
+        <p>Grab your tickets now!!</p>
+        <a href="landing.html">
+        <button class="w3-button w3-margin-bottom">Buy Tickets</button></a>
+      </div>
+    </div>
+    <div class="w3-half w3-margin-bottom">
+      <img src="data:image/jpeg;base64,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" alt="Austria" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Delhi, India</h3>
+        <p class="w3-opacity">One-way from Rs.6500</p>
+        <p>vist the magical architecture Today!!!</p>
+        <a href="landing.html">
+          <button class="w3-button w3-margin-bottom">Buy Tickets</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="w3-container">
+    <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
+      <h2>Get the best offers first!</h2>
+      <p>Join our newsletter.</p>
+      <label>E-mail</label>
+      <input class="w3-input w3-border" type="text" placeholder="Your Email address">
+      <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container">
+    <h2>Contact</h2>
+    <p>Let us book your next trip!</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Chennai, India<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9876543210<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: jyholidays@mail.com<br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p></p>
+ <a class="w3-button w3-round-xxlarge w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+</script>
+
+</body>
+</html>

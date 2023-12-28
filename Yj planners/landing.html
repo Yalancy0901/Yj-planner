@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .filters-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Optional: Set a maximum width for the filters box */
+    margin-bottom: 20px; /* Add margin to create space below the filter box */
+  }
+
+  .flight-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .flight-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Optional: Set a maximum width for the boxes */
+    margin-bottom: 20px; /* Add margin to create space below each flight box */
+  }
+  .flight-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flight-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+  }
+
+  .flight-box img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .flight-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flight-details h2 {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .flight-details p {
+    margin: 0;
+  }
+
+  .flight-details .route {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .flight-details .route img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  .flight-details .book-button {
+    
+    padding: 5px 10px; 
+    font-size: 12px;
+    background-color: rgb(73, 135, 189);
+    display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50%; /* This makes the button round */
+            text-decoration: none;
+            
+            color: black; /* Button text color */
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer; 
+    
+  }
+</style>
+</head>
+<body>
+  
+    <div class="filters-container">
+        <div class="filters-box">
+          <h3>Filters</h3>
+          <label><input type="checkbox"> Direct Flights</label><br>
+          <label><input type="checkbox"> Economy Class</label><br>
+          <label><input type="checkbox"> Morning Departures</label><br>
+          <label><input type="checkbox"> Evening Departures</label><br>
+          <h4 class="filter-heading">Price Range:</h4>
+          <label class="price-range-label">Min:</label>
+          <input type="number" placeholder="Min" id="minPrice">
+          <label class="price-range-label">Max:</label>
+          <input type="number" placeholder="Max" id="maxPrice">
+          <button onclick="applyFilters()">Apply</button>
+        </div>
+      </div>
+  <div class="flight-list">
+    <div class="flight-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqVL-1-pH5Z9PruA8CNWDG6JD9vxD8cr74Aw&usqp=CAU" alt="Air India">
+        <div class="flight-details">
+          <h2>Air India</h2>
+          <p><strong>Time:</strong> 10:00 AM</p>
+          <p><strong>Cost:</strong> 9000</p>
+          <div class="route">
+            
+            
+          </div>
+          <a href="payment.html">
+            <button class="book-button">Book Now</button></a>
+        </div>
+    </div>
+    <div class="flight-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIE0KfP-ceiL6eLJTRgQR_IMMcRoiJHgVOhw&usqp=CAU" alt="Air India">
+        <div class="flight-details">
+          <h2>Indigo</h2>
+          <p><strong>Time:</strong> 12:00 AM</p>
+          <p><strong>Cost:</strong> 6200</p>
+          <div class="route">
+            
+           
+          </div>
+          <a href="payment.html">
+          <button class="book-button">Book Now</button></a>
+        </div>
+    </div>
+    <div class="flight-box">
+      <img src="data:image/png;base64,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" alt="Air India">
+        <div class="flight-details">
+          <h2>SpiceJet</h2>
+          <p><strong>Time:</strong> 9:00 AM</p>
+          <p><strong>Cost:</strong> 8000</p>
+          <div class="route">
+            
+            
+          </div>
+          <a href="payment.html">
+            <button class="book-button">Book Now</button></a>
+        </div>
+    </div>
+    
+    <div class="flight-box">
+      
+        <img src="data:image/png;base64,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" alt="Air India">
+        <div class="flight-details">
+          <h2>Air Asia</h2>
+          <p><strong>Time:</strong> 8:30 AM</p>
+          <p><strong>Cost:</strong> 7500</p>
+          <div class="route">
+            
+            
+          </div>
+          <a href="payment.html">
+            <button class="book-button">Book Now</button></a>
+        </div>
+      </div>
+    
+  </div>
+
+</body>
+</html>

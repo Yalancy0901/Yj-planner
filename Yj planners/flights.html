@@ -1,0 +1,295 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="flightstyle.css">
+    
+
+    </head>
+    <body>
+        <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <div class="card">
+                <div class="contains">Flights</div>
+                <div class="contains">Accomodations</div>
+                <div class="contains" ><a href="hometohome.html"alt=home>HomeToHome</a></div>
+                <div class="contains">Holiday Packages</div>
+                <div class="contains">Plans</div>
+                <div class="contains">Contact</div>
+                <button class="contains">login</button>
+                <button class="contains">Sign Up</button>
+               
+              </div>
+        </nav>
+        
+    </header>
+    <section>
+       
+        <div class="center-wrapper">
+            <div class="flight-booking-container">
+                <h1></h1>
+        <div class="flight-booking-container">
+            <form action="landing.html" method="post" class="flight-booking-form">
+                <div class="form-row">
+                    <label for="departure">Departure Airport:</label>
+                    <input type="text" id="destination" name="destination" list="destinations" required>
+                    <datalist id="destinations">
+                        
+                        <option value="Banglore"></option>
+                        <option value="Chennai"></option>
+                        <option value="Delhi"></option>
+                        <option value="Kolkata"></option>
+                        <option value="Mumbai"></option>
+                        <option value="Punjab"></option>
+                        
+                    </datalist>
+                </div>
+    
+                <div class="form-row">
+                    <label for="destination">Destination Airport:</label>
+                    <input type="text" id="destination" name="destination" list="destinations" required>
+                    <datalist id="destinations">
+                        
+                        <option value="Banglore"></option>
+                        <option value="Chennai"></option>
+                        <option value="Delhi"></option>
+                        <option value="Kolkata"></option>
+                        <option value="Mumbai"></option>
+                        <option value="Punjab"></option>
+                        
+                    </datalist>
+                </div>
+    
+                <div class="form-row">
+                    <label for="departure-date">Departure Date:</label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+                </div>
+    
+                <div class="form-row">
+                    <label for="return-date">Return Date:</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+    
+                <div class="form-row">
+                    <label for="passengers">Passengers:</label>
+                    <select id="passengers" name="passengers" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+    
+                <div class="form-row">
+                  
+                    <input type="submit" value="Search Flights">
+                
+                    
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    </section>
+    <h2 style="align-items: center;justify-content: center;display: flex;">TOP LOCATIONS</h2>
+    <section>
+      
+      <div class="grid-container">
+        <div class="grid-item">
+            <div class="image-content">
+                <img src="goa.jpg" alt="Image 1">
+            </div>
+            <div class="text-content">
+                <h2>Goa</h2>
+                <p>Cost of Flight: Rs.8300</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="image-content">
+                <img src="kolkata.jpg" alt="Image 2">
+            </div>
+            <div class="text-content">
+                <h2>Kolkata</h2>
+                <p>Cost of Flight: Rs.6000</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="image-content">
+                <img src="tn.jpg" alt="Image 3">
+            </div>
+            <div class="text-content">
+                <h2>Chennai</h2>
+                <p>Cost of Flight: Rs.6500</p>
+            </div>
+        </div>
+        <div class="grid-item">
+          <div class="image-content">
+              <img src="shimla.jpg" alt="Image 3">
+          </div>
+          <div class="text-content">
+              <h2>shimla</h2>
+              <p>Cost of Flight: rs.3000</p>
+          </div>
+      </div>
+      <div class="grid-item">
+        <div class="image-content">
+            <img src="delhi.jpg" alt="Image 3">
+        </div>
+        <div class="text-content">
+            <h2>Delhi</h2>
+            <p>Cost of Flight: Rs7000</p>
+        </div>
+    </div>
+    <div class="grid-item">
+      <div class="image-content">
+          <img src="mumbai.jpg" alt="Image 3">
+      </div>
+      <div class="text-content">
+          <h2>Mumbai</h2>
+          <p>Cost of Flight: Rs.8000</p>
+      </div>
+  </div>
+    
+        <!-- Repeat for Rows 2 and 3 -->
+    </div>
+    </section>
+    <section>
+      <section class="section-offer" id="offers">
+        <div class="container-offer-box">
+          <div class="offer-box__percentage" data-aos="zoom-in">50%</div>
+          <div class="offer-box__content" data-aos="fade-up">
+            <h2 class="heading heading--2">
+              Special Offer this month on our premium tours and Regular tours
+            </h2>
+            <p>
+              Grab this offer NOW!!!!
+            </p>
+            <button class="btn">Book Now</button>
+          </div>
+        </div>
+      </section>
+    
+
+    </section>
+    <section>
+      <div class="contact-section">
+        <div class="contact-box">
+          <h2>Contact Us</h2>
+          <div class="contact-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message"></textarea>
+    
+            <button type="submit">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="section-footer">
+      <div class="footer-box container">
+        <div class="contact-details">
+          <h2 class="heading heading--2 margin-bottom">Tourism</h2>
+          <ul class="contact-data">
+            <li class="location">Chennai, tamilnadu</li>
+            <li class="phone">+00 8939430409</li>
+            <li class="email">jyholidays.com</li>
+            <li class="social">
+              <img
+                src="./img/logo-whatsapp.svg"
+                alt="whatsapp icon"
+                width="35"
+                height="35"
+              />
+
+              <img
+                src="./img/logo-facebook.svg"
+                alt="facebook icon"
+                width="35"
+                height="35"
+              />
+
+              <img
+                src="./img/logo-instagram.svg"
+                alt="instagram icon"
+                width="35"
+                height="35"
+              />
+
+              <img
+                src="./img/logo-twitter.svg"
+                alt="twitter icon"
+                width="35"
+                height="35"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer-nav" aria-label="navigation">
+          <div class="nav-name">Quick Links</div>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#offers">Offeres</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="navigation">
+          <div class="nav-name">Popular Destination</div>
+          <ul>
+            <li><a href="#tours">Mumbai</a></li>
+            <li><a href="#tours">Goa</a></li>
+            <li><a href="#tours">Chennai</a></li>
+            <li><a href="#tours">Kolkata</a></li>
+            <li><a href="#tours">shimla</a></li>
+          </ul>
+        </nav>
+
+        <div class="newsletter">
+          <div class="newsletter__title">News Letter</div>
+          <div class="newsletter__text">
+            Subscribe to get more info about us
+
+          </div>
+          <form class="newsletter__input">
+            <input type="text" placeholder="example@domine.com" />
+            <img
+              src="./img/send.svg"
+              alt="send icon"
+              class="send-icon"
+              width="36"
+              height="36"
+            />
+          </form>
+        </div>
+
+        <div class="legel">
+          <p class="text">Copyright &copy; jy holidays&nbsp;</p>
+          <a href="https://github.com/Manoranjan-D/responsive-website-tourism">
+            <img
+              src="logo.jpg"
+              alt="github"
+              class="github"
+              width="35"
+              height="35"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+    </html>
